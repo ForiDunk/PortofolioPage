@@ -1,8 +1,13 @@
 import React from 'react';
+import Projects from './Projects';
+import Introduction from './Introduction';
+import Footer from './Footer';
 
 const DashboardPage = () => (
   <div>
-    Dashboard page content
+    <Introduction />
+    <Projects />
+    <Footer />
   </div>
 );
 
