@@ -8,8 +8,6 @@ const Header = () => (
         <Link className="header__title" to="/">
           <h1>Szabolcs Forreiter</h1>
         </Link>
-        <button className="button button--link" href="#">About</button>
-        <button className="button button--link" href="#">Projects</button>
         <button className="button button--link" href="#">Contact</button>
       </div>
     </div>
