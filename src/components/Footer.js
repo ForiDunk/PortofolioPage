@@ -1,11 +1,31 @@
 import React from 'react';
+import { AppBar, Toolbar, Typography} from '@material-ui/core';
+
+
+const styles = {
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  typograpth: {
+    margin: 10
+  }
+}
 
 const Footer = () => (
-  <div className="content-container">
-    <div className=""><a href="#">GitHub</a></div>  
-    <div className=""><a href="#">Facebook</a></div>  
-    <div className=""><a href="#">LinkedIn</a></div>  
-  </div>
+<AppBar position="static" color="primary">
+      <Toolbar style={styles.toolbar}>
+        <Typography style={styles.typograpth} variant="subheading" color="inherit">
+          GitHub
+        </Typography>
+        <Typography style={styles.typograpth} variant="subheading" color="inherit">
+          Facebook
+        </Typography>
+        <Typography style={styles.typograpth} variant="subheading" color="inherit">
+          LinkedIn
+        </Typography>
+      </Toolbar>
+    </AppBar>
 );
 
 export default Footer;

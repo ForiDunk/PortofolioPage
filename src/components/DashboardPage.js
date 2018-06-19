@@ -1,7 +1,7 @@
 import React from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Header from './Header';
-import Projects from './Projects';
+import ProjectsList from './ProjectsList';
 import Introduction from './Introduction';
 import Footer from './Footer';
 
@@ -10,7 +10,7 @@ const DashboardPage = () => (
     <CssBaseline />
     <Header />
     <Introduction />
-    <Projects />
+    <ProjectsList />
     <Footer />
   </React.Fragment>
 );

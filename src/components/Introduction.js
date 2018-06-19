@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Introduction = () => (
-  <div className="page-header">
-    <div className="content-container">
+  <div>
+    <div>
       <h1>Hello!</h1>
       <h3>All good things start out you challanging yourself...</h3>
       <p>...like "I wonder if I can learn to code..."</p>
