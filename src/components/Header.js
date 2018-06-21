@@ -1,17 +1,32 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { AppBar, Toolbar, Typography } from "@material-ui/core";
+
+const styles = {
+  toolBar: {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "flex-start"
+  },
+  typograpth: {
+    margin: 10
+  }
+};
 
 const Header = () => (
-  <header className="header">
-    <div className="content-container">
-      <div className="header__content">
-        <Link className="header__title" to="/">
-          <h1>Szabolcs Forreiter</h1>
-        </Link>
-        <button className="button button--link" href="#">Contact</button>
-      </div>
-    </div>
-  </header>
+  <div>
+    <AppBar position="static" color="primary">
+      <Toolbar style={styles.toolBar}>
+        
+        <Typography
+          style={styles.typograpth}
+          variant="display3"
+          color="inherit"
+        >
+          Hello and wellcome to my site! Feel free to check out  my projects and, if you have tive, send me a feedback.
+        </Typography>
+      </Toolbar>
+    </AppBar>
+  </div>
 );
 
 export default Header;
