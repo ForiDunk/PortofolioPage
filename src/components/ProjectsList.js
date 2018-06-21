@@ -30,6 +30,7 @@ class ProjectsList extends React.Component {
               <Switch
                 checked={this.state.checkedA}
                 onChange={this.handleChange}
+                color="secondary"
               />
             }
             label="Projects"

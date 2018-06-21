@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Paper, Button } from "@material-ui/core";
+import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 
 const styles = {
   toolBar: {
@@ -8,30 +8,23 @@ const styles = {
     flex: 1,
     justifyContent: "space-between"
   },
-  paper: {
-    marginTop: 20,
-    maxWidth: 500,
-    textAlign: "center"
-  },
   typograpth: {
-    marginBottom: 10
+    margin: 10
   }
 };
 
 const Header = (props) => (
   <div>
-    <AppBar position="static" color="primary">
+    <AppBar position="static" color="secondary">
       <Toolbar style={styles.toolBar}>
       <div>
-        <Paper style={styles.paper}>
-          <Typography
-            style={styles.typograpth}
-            variant="display2"
-            color="primary"
-          >
-            Wellcome to my site!
-          </Typography>
-        </Paper>
+        <Typography
+          style={styles.typograpth}
+          variant="display2"
+          color="inherit"
+        >
+          Wellcome to my site!
+        </Typography>
         <Typography 
         variant="subheading"
         color="inherit" 

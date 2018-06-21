@@ -18,7 +18,7 @@ export default () => (
       You can download my CV by clicking on the icon below:
     </Typography>
     <Tooltip title="Download CV">
-      <Button style={styles.button} size="small" color="secondary">
+      <Button style={styles.button} size="small" color="primary">
       <FileDownload />
       </Button>
     </Tooltip>

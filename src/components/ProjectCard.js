@@ -30,21 +30,20 @@ const ProjectCard = ({ project, isHidden }) => (
       in={!isHidden}
       {...(!isHidden ? { timeout: 1000 } : { timeout: 1000 })}
     >
-      <Card style={styles.card}>
+      <Card raised style={styles.card}>
         <CardMedia style={styles.media} image={project.image} />
         <CardContent>
-          <Typography gutterBottom variant="headline" component="h2">
+          <Typography gutterBottom variant="headline" color="secondary" component="h2">
             {project.title}
           </Typography>
-          <Typography component="p">{project.description}</Typography>
+          <Typography color="secondary" component="p">{project.description}</Typography>
         </CardContent>
         <CardActions>
           <Button
             href={project.url}
             target="_blank"
-            variant="contained"
+            variant="outlined"
             color="secondary"
-            size="small"
           >
             Check out
           </Button>

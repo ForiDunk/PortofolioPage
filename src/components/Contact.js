@@ -36,7 +36,7 @@ const Contact = props => (
     <Typography
       style={styles.typograpth}
       variant="display1"
-      color="inherit"
+      color="primary"
     >
       Szabolcs Forreiter
     </Typography>
