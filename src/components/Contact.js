@@ -16,8 +16,8 @@ const styles = {
     margin: 10
   },
   avatar: {
-    width: 60,
-    height: 60,
+    width: 120,
+    height: 120,
     margin: 10
   }
 };
@@ -30,12 +30,12 @@ const Contact = props => (
   >
     <Avatar
       style={styles.avatar}
-      alt="Adelle Charles"
-      src="https://uploads.codesandbox.io/uploads/user/88e6954e-f7dd-42b7-b1b4-dcc3d4b18694/lRqF-download.jpg"
+      alt="Szabolcs Forreiter"
+      src="https://image.ibb.co/iLgtx8/2015_05_25_14_29_09_512.jpg"
     />
     <Typography
       style={styles.typograpth}
-      variant="headline"
+      variant="display1"
       color="inherit"
     >
       Szabolcs Forreiter

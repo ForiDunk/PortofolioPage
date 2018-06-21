@@ -24,13 +24,12 @@ class DashboardPage extends React.Component {
     return (
       <React.Fragment>
         <CssBaseline />
-        <Header />
+        <Header onClick={this.handleOnClick} />
         <Contact
           open={this.state.open}
           onOpen={this.handleOnOpen}
           close={this.handleOnClose}
         />
-        <button onClick={this.handleOnClick}>Contact</button>
         <Introduction />
         <ProjectsList />
       </React.Fragment>
