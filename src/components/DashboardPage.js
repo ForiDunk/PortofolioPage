@@ -12,7 +12,6 @@ class DashboardPage extends React.Component {
 
   handleOnClick = () => {
     this.setState(prevState => ({ open: !prevState.open }));
-    console.log(this.state.open);
   };
   handleOnClose = () => {
     this.setState({ open: false });

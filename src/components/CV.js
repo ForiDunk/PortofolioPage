@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Tooltip, Typography } from "@material-ui/core";
-import AddIcon from "@material-ui/icons/Add";
+import FileDownload from '@material-ui/icons/FileDownload';;
 
 const styles = {
   div: {
@@ -8,6 +8,9 @@ const styles = {
     flexDirection: "column",
     alignItems: "center",
     margin: 20
+  },
+  button: {
+    margin: 7
   }
 };
 
@@ -18,8 +21,8 @@ export default () => (
       You can download my CV by clicking on the button below:
     </Typography>
     <Tooltip title="Download CV">
-      <Button variant="fab" color="secondary" aria-label="add">
-        <AddIcon />
+      <Button style={styles.button} variant="fab" color="secondary">
+      <FileDownload />
       </Button>
     </Tooltip>
   </div>
