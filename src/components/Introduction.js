@@ -1,16 +1,41 @@
-import React from 'react';
+import React from "react";
+import { Paper, Typography } from "@material-ui/core";
+
+const styles = {
+  div: {
+    display: "flex",
+    justifyContent: "center",
+    marginTop: 10
+  },
+  paper: {
+    maxWidth: 500,
+    padding: 10
+  }
+};
 
 const Introduction = () => (
-  <div>
-    <div>
-      <h1>Hello!</h1>
-      <h3>All good things start out you challanging yourself...</h3>
-      <p>...like "I wonder if I can learn to code..."</p>
-      <p>...than you try...</p> 
-      <p>...and people say "you can't..."</p>
-      <p>...and after like a year of constant learning, I present you my portofolio page.</p>
-      <a href="#"><p>downloadable cv</p></a>
-    </div>
+  <div style={styles.div}>
+    <Paper style={styles.paper} elevation={4}>
+      <Typography color="secondary" variant="headline">
+        Hello!
+      </Typography>
+      <Typography color="secondary" variant="subheading">
+        All good things start out you challanging yourself...
+      </Typography>
+      <Typography color="secondary" variant="subheading">
+        ...like "I wonder if I can learn to code..."
+      </Typography>
+      <Typography color="secondary" variant="subheading">
+        ...than you try...
+      </Typography>
+      <Typography color="secondary" variant="subheading">
+        ...and people say "you can't..."
+      </Typography>
+      <Typography color="secondary" variant="title">
+        ...and after like a year of constant learning, I present you my
+        portofolio page.
+      </Typography>
+    </Paper>
   </div>
 );
 
