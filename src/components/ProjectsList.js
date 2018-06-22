@@ -1,7 +1,8 @@
 import React, { Fragment } from "react";
 import { store } from "./store";
 import ProjectCard from "./ProjectCard";
-import { Paper, Switch, FormControlLabel } from "@material-ui/core";
+import { Switch, FormControlLabel, withStyles } from "@material-ui/core";
+import PropTypes from "prop-types";
 
 const styles = {
   div: {
@@ -13,18 +14,22 @@ const styles = {
 };
 
 class ProjectsList extends React.Component {
-  state = {
-    isHidden: true
-  };
+  constructor(props) {
+    super(props);
 
-  handleChange = () => {
+    this.state = {
+      isHidden: true
+    };
+  }
+
+  handleChange = props => {
     this.setState({ isHidden: !this.state.isHidden });
   };
 
   render() {
     return (
       <Fragment>
-        <div style={styles.div}>
+        <div className={this.props.classes.div}>
           <FormControlLabel
             control={
               <Switch
@@ -50,4 +55,8 @@ class ProjectsList extends React.Component {
   }
 }
 
-export default ProjectsList;
+ProjectsList.propTypes = {
+  children: PropTypes.node,
+  classes: PropTypes.object.isRequired
+};
+export default withStyles(styles)(ProjectsList);

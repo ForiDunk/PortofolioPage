@@ -5,20 +5,31 @@ import {
   Typography,
   SwipeableDrawer,
   Divider,
-  List,
-  ListItem,
-  ListItemText
+  withStyles
 } from "@material-ui/core";
-import { SocialIcon } from 'react-social-icons';
+import { SocialIcon } from "react-social-icons";
+import PropTypes from "prop-types";
 
 const styles = {
   typograpth: {
-    margin: 10
+    margin: 5
+  },
+  links: {
+    textDecoration: "none"
   },
   avatar: {
-    width: 120,
-    height: 120,
-    margin: 10
+    width: 60,
+    height: 60,
+    marginLeft: 5,
+    marginTop: 5
+  },
+  socialIcon: {
+    height: 20,
+    width: 20,
+    margin: 5
+  },
+  divider: {
+    marginBottom: 20
   }
 };
 
@@ -29,35 +40,61 @@ const Contact = props => (
     onClose={props.close}
   >
     <Avatar
-      style={styles.avatar}
+      className={props.classes.avatar}
       alt="Szabolcs Forreiter"
       src="https://image.ibb.co/iLgtx8/2015_05_25_14_29_09_512.jpg"
     />
     <Typography
-      style={styles.typograpth}
-      variant="display1"
-      color="primary"
+      className={props.classes.typograpth}
+      variant="headline"
+      color="secondary"
+      divider
     >
       Szabolcs Forreiter
     </Typography>
-    <List>
-      <ListItem>
-        <ListItemText primary="GitHub" />
-        <SocialIcon url="https://github.com/ForiDunk" />
-      </ListItem>
-      <Divider />
-      <ListItem divider>
-        <ListItemText primary="Facebook" />
-        <SocialIcon url="https://www.facebook.com/forreiter.szabolcs" />
-      </ListItem>
-      <ListItem>
-        <ListItemText primary="LinkedIn" />
-        <SocialIcon url="https://www.linkedin.com/in/szabolcs-forreiter/" />
-      </ListItem>
-      <Divider light />
-    </List>
+    <Divider className={props.classes.divider} />
+    <Typography
+      className={props.classes.links}
+      href="https://github.com/ForiDunk"
+      target="_blank"
+      component="a"
+    >
+      <SocialIcon style={styles.socialIcon} url="https://github.com/ForiDunk" />
+      GitHub
+    </Typography>
+
+    <Typography
+      className={props.classes.links}
+      href="https://www.facebook.com/forreiter.szabolcs"
+      target="_blank"
+      component="a"
+    >
+      <SocialIcon
+        style={styles.socialIcon}
+        url="https://www.facebook.com/forreiter.szabolcs"
+      />
+      Facebook
+    </Typography>
+
+    <Typography
+      className={props.classes.links}
+      href="https://www.linkedin.com/in/szabolcs-forreiter/"
+      target="_blank"
+      component="a"
+    >
+      <SocialIcon
+        style={styles.socialIcon}
+        url="https://www.linkedin.com/in/szabolcs-forreiter/"
+      />
+      LinkedIn
+    </Typography>
+
     <CV />
   </SwipeableDrawer>
 );
 
-export default Contact;
+Contact.propTypes = {
+  children: PropTypes.node,
+  classes: PropTypes.object.isRequired
+};
+export default withStyles(styles)(Contact);

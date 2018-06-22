@@ -6,8 +6,10 @@ import {
   CardMedia,
   Button,
   Typography,
-  Slide
+  Slide,
+  withStyles
 } from "@material-ui/core";
+import PropTypes from "prop-types";
 
 const styles = {
   card: {
@@ -21,7 +23,7 @@ const styles = {
   }
 };
 
-const ProjectCard = ({ project, isHidden }) => (
+const ProjectCard = ({ project, isHidden, ...props }) => (
   <div>
     <Slide
       direction="down"
@@ -30,13 +32,20 @@ const ProjectCard = ({ project, isHidden }) => (
       in={!isHidden}
       {...(!isHidden ? { timeout: 1000 } : { timeout: 1000 })}
     >
-      <Card raised style={styles.card}>
-        <CardMedia style={styles.media} image={project.image} />
+      <Card raised className={props.classes.card}>
+        <CardMedia className={props.classes.media} image={project.image} />
         <CardContent>
-          <Typography gutterBottom variant="headline" color="secondary" component="h2">
+          <Typography
+            gutterBottom
+            variant="headline"
+            color="secondary"
+            component="h2"
+          >
             {project.title}
           </Typography>
-          <Typography color="secondary" component="p">{project.description}</Typography>
+          <Typography color="secondary" component="p">
+            {project.description}
+          </Typography>
         </CardContent>
         <CardActions>
           <Button
@@ -53,4 +62,8 @@ const ProjectCard = ({ project, isHidden }) => (
   </div>
 );
 
-export default ProjectCard;
+ProjectCard.propTypes = {
+  children: PropTypes.node,
+  classes: PropTypes.object.isRequired
+};
+export default withStyles(styles)(ProjectCard);

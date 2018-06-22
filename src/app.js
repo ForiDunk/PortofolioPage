@@ -5,20 +5,20 @@ import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
   palette: {
-    type: 'dark', // Switching the dark mode on is a single property value change.
+    type: "dark",
     primary: {
-      light: '#F0F4C3',
-      main: '#E6EE9C',
-      dark: '#DCE775',
-      contrastText: '#fff',
+      light: "#0097A7",
+      main: "#00838F",
+      dark: "#006064",
+      contrastText: "#fff"
     },
     secondary: {
-      light: '#B2EBF2',
-      main: '#80DEEA',
-      dark: '#80DEEA',
-      contrastText: '#000',
-    },
-  },
+      light: "#80DEEA",
+      main: "#4DD0E1",
+      dark: "#26C6DA",
+      contrastText: "#000"
+    }
+  }
 });
 
 const DarkTheme = () => {
