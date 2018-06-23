@@ -23,7 +23,7 @@ const CV = props => (
     <Typography variant="title">Thank you for visiting!</Typography>
     <Typography variant="caption">You can download my CV here:</Typography>
     <Tooltip title="Download CV">
-      <Button variant="fab" className={props.classes.button}>
+      <Button href="http://s000.tinyupload.com/?file_id=06616342139851840174" target="_blank" variant="fab" className={props.classes.button}>
         <FileDownload />
       </Button>
     </Tooltip>
