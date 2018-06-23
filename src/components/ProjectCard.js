@@ -6,16 +6,15 @@ import {
   CardMedia,
   Button,
   Typography,
-  Slide,
   withStyles
 } from "@material-ui/core";
 import PropTypes from "prop-types";
+import Fade  from 'react-reveal/Fade';
 
 const styles = {
   card: {
     maxWidth: 300,
-    marginTop: 20,
-    marginBottom: 10
+    margin: 10
   },
   media: {
     height: 0,
@@ -23,15 +22,10 @@ const styles = {
   }
 };
 
-const ProjectCard = ({ project, isHidden, ...props }) => (
-  <div>
-    <Slide
-      direction="down"
-      mountOnEnter
-      unmountOnExit
-      in={!isHidden}
-      {...(!isHidden ? { timeout: 1000 } : { timeout: 1000 })}
-    >
+const ProjectCard = ({ project, ...props }) => {
+  
+  return (
+    <Fade left>
       <Card raised className={props.classes.card}>
         <CardMedia className={props.classes.media} image={project.image} />
         <CardContent>
@@ -58,9 +52,9 @@ const ProjectCard = ({ project, isHidden, ...props }) => (
           </Button>
         </CardActions>
       </Card>
-    </Slide>
-  </div>
-);
+    </Fade>
+  );
+}
 
 ProjectCard.propTypes = {
   children: PropTypes.node,
