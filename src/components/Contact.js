@@ -1,42 +1,31 @@
 import React from "react";
 import CV from "./CV";
 import {
+  Button,
   Avatar,
   Typography,
-  SwipeableDrawer,
+  Drawer,
   Divider,
   withStyles
 } from "@material-ui/core";
-import { SocialIcon } from "react-social-icons";
 import PropTypes from "prop-types";
 
 const styles = {
   typograpth: {
-    margin: 5
-  },
-  links: {
-    textDecoration: "none"
+    margin: 5,
+    marginBottom: 20
   },
   avatar: {
     width: 60,
     height: 60,
     marginLeft: 5,
     marginTop: 5
-  },
-  socialIcon: {
-    height: 20,
-    width: 20,
-    margin: 5
-  },
-  divider: {
-    marginBottom: 20
   }
 };
 
 const Contact = props => (
-  <SwipeableDrawer
+  <Drawer
     open={props.open}
-    onOpen={props.onOpen}
     onClose={props.close}
   >
     <Avatar
@@ -48,49 +37,32 @@ const Contact = props => (
       className={props.classes.typograpth}
       variant="headline"
       color="secondary"
-      divider
     >
       Szabolcs Forreiter
     </Typography>
-    <Divider className={props.classes.divider} />
-    <Typography
-      className={props.classes.links}
+    <Button
       href="https://github.com/ForiDunk"
       target="_blank"
-      component="a"
     >
-      <SocialIcon style={styles.socialIcon} url="https://github.com/ForiDunk" />
       GitHub
-    </Typography>
-
-    <Typography
-      className={props.classes.links}
+    </Button>
+    <Divider />
+    <Button
       href="https://www.facebook.com/forreiter.szabolcs"
       target="_blank"
-      component="a"
     >
-      <SocialIcon
-        style={styles.socialIcon}
-        url="https://www.facebook.com/forreiter.szabolcs"
-      />
       Facebook
-    </Typography>
-
-    <Typography
-      className={props.classes.links}
+    </Button>
+    <Divider />
+    <Button
       href="https://www.linkedin.com/in/szabolcs-forreiter/"
       target="_blank"
-      component="a"
     >
-      <SocialIcon
-        style={styles.socialIcon}
-        url="https://www.linkedin.com/in/szabolcs-forreiter/"
-      />
       LinkedIn
-    </Typography>
+    </Button>
 
     <CV />
-  </SwipeableDrawer>
+  </Drawer>
 );
 
 Contact.propTypes = {

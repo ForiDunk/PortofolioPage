@@ -17,17 +17,13 @@ class DashboardPage extends React.Component {
     this.setState({ open: false });
   };
 
-  handleOnOpen = () => {
-    this.setState({ open: true });
-  };
   render() {
     return (
       <React.Fragment>
         <CssBaseline />
         <Header onClick={this.handleOnClick} />
         <Contact
-          open={this.state.open}
-          onOpen={this.handleOnOpen}
+          open={this.state.open} 
           close={this.handleOnClose}
         />
         <Introduction />
