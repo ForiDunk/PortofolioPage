@@ -13,14 +13,14 @@ const styles = {
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-between",
+    alignItems: 'center',
     background: "linear-gradient(45deg, #006064 20%, #4DD0E1 80%, #E0F7FA 95%)",
   },
   appBar: {
     opacity: 0.9
   },
   button: {
-    color: "#006064",
-    fontWeight: 700,
+    fontWeight: 700
   }
 };
 
@@ -44,6 +44,7 @@ const Header = props => (
       </div>
       <Button
         size="small"
+        color="primary"
         className={props.classes.button}
         onClick={props.onClick}
       >
