@@ -13,7 +13,7 @@ import Roll  from 'react-reveal/Roll';
 
 const styles = {
   card: {
-    maxWidth: 300,
+    maxWidth: 200,
     margin: 10
   },
   media: {
@@ -25,7 +25,7 @@ const styles = {
 const ProjectCard = ({ project, ...props }) => {
   
   return (
-    <Roll left duration={2000}>
+    <Roll left duration={2500}>
       <Card raised className={props.classes.card}>
         <CardMedia className={props.classes.media} image={project.image} />
         <CardContent>

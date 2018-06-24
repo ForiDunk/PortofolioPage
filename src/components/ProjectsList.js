@@ -1,19 +1,27 @@
 import React, { Fragment } from "react";
 import { store } from "./store";
 import ProjectCard from "./ProjectCard";
-import { withStyles } from "@material-ui/core";
+import { withStyles, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
 
 const styles = {
   div: {
     display: "flex",
     justifyContent: "center",
-    flexWrap: "wrap"
+    flexWrap: "wrap",
+    maxWidth: 500,
+    marginTop: 10,
+    marginBottom: 20
+  },
+  title: {
+    marginTop: 50,
+    marginBottom: 10
   }
 };
 
 const ProjectsList = (props) => (
   <Fragment>
+      <Typography className={props.classes.title} variant="display2" color="secondary">Below you can check out some of my projects:</Typography>
     <div className={props.classes.div}>
       {store.map((project, i) => (
         <ProjectCard

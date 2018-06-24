@@ -6,9 +6,17 @@ import NotFoundPage from '../components/NotFoundPage';
 
 export const history = createHistory();
 
+const styles = {
+  display: 'flex',
+  flexWrap: 'wrap',
+  alignItems: 'center',
+  flexDirection: 'column',
+  justifyContent: 'center'
+}
+
 const AppRouter = () => (
   <Router history={history}>
-    <div>
+    <div style={styles}>
       <Switch>
         <Route path="/" component={DashboardPage} exact={true} />
         <Route component={NotFoundPage} />

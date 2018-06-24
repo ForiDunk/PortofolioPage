@@ -1,7 +1,6 @@
 import React from "react";
 import { Avatar, Typography, withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
-import Rotate from 'react-reveal/Rotate';
 import Flip from 'react-reveal/Flip';
 
 const styles = {
@@ -9,17 +8,27 @@ const styles = {
     display: "flex",
     alignItems: 'center',
     flexDirection:'column',
-    marginTop: 40
+    marginTop: 84
   },
   avatar: {
     width: 120,
     height: 120,
-    margin: 5
+    margin: 5,
+    '&:hover': {
+      transition: '1.5s',
+      width: 360,
+      height: 360
+    }      
   },
   mainAvatar: {
     width: 200,
     height: 200,
-    marginBottom: 20
+    marginBottom: 20,
+    '&:hover': {
+      transition: '1.5s',
+      width: 360,
+      height: 360
+    }      
   },
   friends: {
     display: 'flex',
@@ -39,31 +48,23 @@ const Introduction = props => (
     <Typography color='secondary' variant="headline">
       My name is Szabolcs Forreiter and i LOVE coding!
     </Typography>
-    <Rotate duration={2000}>
-      <Avatar className={props.classes.mainAvatar} src="https://image.ibb.co/nM5NC8/pjimage.jpg" />
-    </Rotate>
+    <Avatar className={props.classes.mainAvatar} src="https://image.ibb.co/nM5NC8/pjimage.jpg" />
     <Typography color='secondary' variant="headline">
     I'm a former professional basketball player. I've played around 16 years
     (I feel old..).
     </Typography>
-    <Rotate duration={2000}>
       <Avatar
         className={props.classes.avatar}
         src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/24058714_1764379576937989_1170795674288173902_n.jpg?_nc_cat=0&oh=30b81e14308673975f1a7c3a9a1e259e&oe=5BB0B6DB"
       />
-    </Rotate>
-
     <Typography color='secondary' variant="headline">
       Nowadays I spend less time on the court and more time in front of a PC
       or laptop.
     </Typography>
-    <Rotate duration={2000}>
       <Avatar
         className={props.classes.avatar}
         src="https://image.ibb.co/d4WZ9o/received_1710075439038524.jpg"
       />
-    </Rotate>
-
     <Typography color='secondary' variant="display1">
     Different sport but the same passion and focus.
     </Typography>
@@ -77,16 +78,13 @@ const Introduction = props => (
     My competitiveness was raised to an other level when I've started to
     play basketball at a young age.
     </Typography>
-    <Rotate duration={2000}>  
       <Avatar
         className={props.classes.avatar}
         src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/222400_457571577618802_953377683_n.jpg?_nc_cat=0&oh=80b3523dd0e801982be7807c7fdcf564&oe=5BB2AEB4"
       />
-    </Rotate>
     <Typography color='secondary' variant="headline">
     I feel lucky that on my journey I've met A LOT of interesting people and I keep in touch with some of them to this day!
     </Typography>
-    <Flip left cascade duration={2000}>
       <div className={props.classes.friends}>
         <Avatar
         className={props.classes.avatar}
@@ -141,13 +139,11 @@ const Introduction = props => (
         src="https://scontent.fotp3-3.fna.fbcdn.net/v/t31.0-8/10258482_707909099251714_6528106503795737905_o.jpg?_nc_cat=0&oh=51677d4fd9389520c88865b98f2e232f&oe=5BAB3D6B"
         />
       </div>
-    </Flip>
 
     <Typography color='secondary' variant="headline">
     I try to model my life in a way that if I want something, I do everything in my power to get it.
     We only live once, so why not go after the things you want in life.
     </Typography>
-    <Flip left cascade duration={2000}>
       <div className={props.classes.friends}>
         <Avatar
         className={props.classes.avatar}
@@ -170,7 +166,6 @@ const Introduction = props => (
         src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/10441067_739025449473412_2657646150584082729_n.jpg?_nc_cat=0&oh=59057d4cb3e2b8093c5d5f65b1a7208d&oe=5BA692D7"
         />
       </div>
-    </Flip>
   </div>
 );
 

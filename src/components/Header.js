@@ -14,20 +14,23 @@ const styles = {
     flexWrap: "no-wrap",
     flex: 1,
     justifyContent: "space-between",
-    background: "linear-gradient(45deg, #006064 20%, #4DD0E1 80%, #E0F7FA 95%)"
+    background: "linear-gradient(45deg, #006064 20%, #4DD0E1 80%, #E0F7FA 95%)",
+  },
+  div: {
+    opacity: 0.9
   },
   typograpth: {
     margin: 10
   },
   button: {
     color: "#006064",
-    fontWeight: 700
+    fontWeight: 700,
   }
 };
 
 const Header = props => (
-  <div>
-    <AppBar position="static" color="primary">
+  <div className={props.classes.div}>
+    <AppBar position="fixed" color="primary">
       <Toolbar className={props.classes.toolBar}>
         <div>
           <Typography
