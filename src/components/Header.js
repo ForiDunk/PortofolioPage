@@ -11,16 +11,12 @@ import PropTypes from "prop-types";
 const styles = {
   toolBar: {
     display: "flex",
-    flexWrap: "no-wrap",
-    flex: 1,
+    flexWrap: "wrap",
     justifyContent: "space-between",
     background: "linear-gradient(45deg, #006064 20%, #4DD0E1 80%, #E0F7FA 95%)",
   },
-  div: {
+  appBar: {
     opacity: 0.9
-  },
-  typograpth: {
-    margin: 10
   },
   button: {
     color: "#006064",
@@ -29,36 +25,32 @@ const styles = {
 };
 
 const Header = props => (
-  <div className={props.classes.div}>
-    <AppBar position="fixed" color="primary">
-      <Toolbar className={props.classes.toolBar}>
-        <div>
-          <Typography
-            className={props.classes.typograpth}
-            variant="display2"
-            color="inherit"
-          >
-            Wellcome to my site!
-          </Typography>
-          <Typography
-            variant="subheading"
-            color="inherit"
-            className={props.classes.typograpth}
-          >
-            Feel free to check out my projects and, if you have tive, send me a
-            feedback.
-          </Typography>
-        </div>
-        <Button
-          size="large"
-          className={props.classes.button}
-          onClick={props.onClick}
+  <AppBar className={props.classes.appBar} position="sticky" color="primary">
+    <Toolbar className={props.classes.toolBar}>
+      <div>
+        <Typography
+          variant="display1"
+          color="inherit"
         >
-          Contact
-        </Button>
-      </Toolbar>
-    </AppBar>
-  </div>
+          Wellcome to my site!
+        </Typography>
+        <Typography
+          variant="caption"
+          color="inherit"
+        >
+          Feel free to check out my projects and, if you have tive, send me a
+          feedback.
+        </Typography>
+      </div>
+      <Button
+        size="small"
+        className={props.classes.button}
+        onClick={props.onClick}
+      >
+        Contact
+      </Button>
+    </Toolbar>
+  </AppBar>
 );
 
 Header.propTypes = {

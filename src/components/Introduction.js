@@ -1,14 +1,12 @@
 import React from "react";
 import { Avatar, Typography, withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
-import Flip from 'react-reveal/Flip';
 
 const styles = {
   div: {
     display: "flex",
     alignItems: 'center',
-    flexDirection:'column',
-    marginTop: 84
+    flexDirection:'column'
   },
   avatar: {
     width: 120,
