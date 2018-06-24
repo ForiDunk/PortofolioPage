@@ -2,7 +2,7 @@ import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "./Header";
 import ProjectsList from "./ProjectsList";
-import Body from "./Body";
+import Introduction from "./Introduction";
 import Contact from "./Contact";
 
 class DashboardPage extends React.Component {
@@ -26,7 +26,7 @@ class DashboardPage extends React.Component {
           open={this.state.open} 
           close={this.handleOnClose}
         />
-        <Body />
+        <Introduction />
         <ProjectsList />
       </React.Fragment>
     );
