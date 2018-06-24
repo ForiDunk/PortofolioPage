@@ -15,13 +15,14 @@ const styles = {
   },
   title: {
     marginTop: 50,
-    marginBottom: 10
+    marginBottom: 10,
+    textAlign: 'center'
   }
 };
 
 const ProjectsList = (props) => (
   <Fragment>
-      <Typography className={props.classes.title} variant="display2" color="secondary">Below you can check out some of my projects:</Typography>
+      <Typography className={props.classes.title} variant="display2" color="secondary">Below you can find some of my projects:</Typography>
     <div className={props.classes.div}>
       {store.map((project, i) => (
         <ProjectCard

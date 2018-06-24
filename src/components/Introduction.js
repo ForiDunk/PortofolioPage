@@ -6,7 +6,8 @@ const styles = {
   div: {
     display: "flex",
     alignItems: 'center',
-    flexDirection:'column'
+    flexDirection:'column',
+    textAlign: 'center'
   },
   avatar: {
     width: 120,
@@ -28,6 +29,9 @@ const styles = {
       height: 360
     }      
   },
+  text: {
+    margin: 20
+  },
   friends: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -39,49 +43,49 @@ const styles = {
 const Introduction = props => (
   <div className={props.classes.div}>
 
-  <Typography color="secondary" variant="display3">
+  <Typography color="secondary" variant="display2">
   Hello, let me introduce myself:
   </Typography>
   
-    <Typography color='secondary' variant="headline">
-      My name is Szabolcs Forreiter and i LOVE coding!
+    <Typography color='secondary' variant="body1">
+      My name is Szabolcs Forreiter and I LOVE coding!
     </Typography>
     <Avatar className={props.classes.mainAvatar} src="https://image.ibb.co/nM5NC8/pjimage.jpg" />
-    <Typography color='secondary' variant="headline">
-    I'm a former professional basketball player. I've played around 16 years
-    (I feel old..).
+    <Typography color='secondary' variant="body1">
+    I am a former professional basketball player and I've played around 16 years
+    (I feel old...).
     </Typography>
       <Avatar
         className={props.classes.avatar}
         src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/24058714_1764379576937989_1170795674288173902_n.jpg?_nc_cat=0&oh=30b81e14308673975f1a7c3a9a1e259e&oe=5BB0B6DB"
       />
-    <Typography color='secondary' variant="headline">
+    <Typography color='secondary' variant="body1">
       Nowadays I spend less time on the court and more time in front of a PC
-      or laptop.
+      or a laptop.
     </Typography>
       <Avatar
         className={props.classes.avatar}
         src="https://image.ibb.co/d4WZ9o/received_1710075439038524.jpg"
       />
-    <Typography color='secondary' variant="display1">
+    <Typography className={props.classes.text} color='secondary' variant="headline">
     Different sport but the same passion and focus.
     </Typography>
 
-    <Typography color='secondary' variant="headline">
-    I'm a very competitive person, I mostly got that from growing up as the
-    yungest child and I had to have a chip on my shoulder.
+    <Typography color='secondary' variant="body1">
+    I am a very competitive person, I mostly got that from growing up as the
+    youngest child.
     </Typography>
 
-    <Typography color='secondary' variant="headline">
-    My competitiveness was raised to an other level when I've started to
+    <Typography color='secondary' variant="body1">
+    My competitiveness was raised to an other level when I started to
     play basketball at a young age.
     </Typography>
       <Avatar
         className={props.classes.avatar}
         src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/222400_457571577618802_953377683_n.jpg?_nc_cat=0&oh=80b3523dd0e801982be7807c7fdcf564&oe=5BB2AEB4"
       />
-    <Typography color='secondary' variant="headline">
-    I feel lucky that on my journey I've met A LOT of interesting people and I keep in touch with some of them to this day!
+    <Typography color='secondary' variant="body1">
+    I feel lucky that on my journey I've met a LOT of interesting people and all of them had a huge impanct on becoming who I am.
     </Typography>
       <div className={props.classes.friends}>
         <Avatar
@@ -90,7 +94,7 @@ const Introduction = props => (
         />
         <Avatar
         className={props.classes.avatar}
-        src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/10416584_739023749473582_1372561913598209950_n.jpg?_nc_cat=0&oh=84c4bdde2cf4b8420d8bf55908f035f6&oe=5BA07CAB"
+        src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/10511352_739023256140298_3090391501228328169_n.jpg?_nc_cat=0&oh=3c00943b018f6ece2191a2ca5d7c76bb&oe=5BB06631"
         />
         <Avatar
         className={props.classes.avatar}
@@ -118,19 +122,7 @@ const Introduction = props => (
         />
         <Avatar
         className={props.classes.avatar}
-        src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/10268545_711759228866701_6760262790965349654_n.jpg?_nc_cat=0&oh=a349287595131593b1e88077dbb6695f&oe=5B9DD3C5"
-        />
-        <Avatar
-        className={props.classes.avatar}
         src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/13532788_1145104115532208_4301338277450753490_n.jpg?_nc_cat=0&oh=f754a984fb3191f678b80bedb88109fd&oe=5BA63131"
-        />
-        <Avatar
-        className={props.classes.avatar}
-        src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/24110_103677846341512_2295635_n.jpg?_nc_cat=0&oh=f61ab4d8996119e39f5470fa525e9aed&oe=5BB190E8"
-        />
-        <Avatar
-        className={props.classes.avatar}
-        src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/10157385_696223940420230_233945602_n.jpg?_nc_cat=0&oh=807f5da1e4621de10cf4d20ef806e1ad&oe=5B9E278F"
         />
         <Avatar
         className={props.classes.avatar}
@@ -138,10 +130,9 @@ const Introduction = props => (
         />
       </div>
 
-    <Typography color='secondary' variant="headline">
-    I try to model my life in a way that if I want something, I do everything in my power to get it.
-    We only live once, so why not go after the things you want in life.
-    </Typography>
+      <Typography className={props.classes.text} color='secondary' variant="body1">
+      We only live once, so why not go after the things you want in life.
+      </Typography>
       <div className={props.classes.friends}>
         <Avatar
         className={props.classes.avatar}
@@ -162,6 +153,10 @@ const Introduction = props => (
         <Avatar
         className={props.classes.avatar}
         src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/10441067_739025449473412_2657646150584082729_n.jpg?_nc_cat=0&oh=59057d4cb3e2b8093c5d5f65b1a7208d&oe=5BA692D7"
+        />
+        <Avatar
+        className={props.classes.avatar}
+        src="https://scontent.fotp3-3.fna.fbcdn.net/v/t1.0-9/35238216_2030269140349030_4708544136611889152_n.jpg?_nc_cat=0&oh=99ee5f7bbb3161c878a5f33876da0dfc&oe=5BAFE56E"
         />
       </div>
   </div>

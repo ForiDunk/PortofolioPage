@@ -32,13 +32,13 @@ const Header = props => (
           variant="display1"
           color="inherit"
         >
-          Wellcome to my site!
+          Welcome to my site
         </Typography>
         <Typography
           variant="caption"
           color="inherit"
         >
-          Feel free to check out my projects and, if you have tive, send me a
+          Feel free to check out my projects and please give me a
           feedback.
         </Typography>
       </div>
