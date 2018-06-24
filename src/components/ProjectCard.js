@@ -13,7 +13,7 @@ import Roll  from 'react-reveal/Roll';
 
 const styles = {
   card: {
-    maxWidth: 200,
+    maxWidth: 250,
     margin: 10
   },
   media: {

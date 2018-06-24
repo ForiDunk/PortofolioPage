@@ -9,7 +9,7 @@ const styles = {
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
-    maxWidth: 500,
+    maxWidth: 600,
     marginTop: 10,
     marginBottom: 20
   },

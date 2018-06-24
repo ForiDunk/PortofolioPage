@@ -5,13 +5,13 @@ export const store = [
     title: 'Fori-Expensify',
     url: 'https://fori-expensify.herokuapp.com/',
     description: 'It\'s time to get your expenses under control! Monitor your expenses with Fori-Expensify.',
-    image: 'https://images.unsplash.com/photo-1512075045244-436869aac75b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ae78c378f217d4c7cb9f2856af7981c9&auto=format&fit=crop&w=1897&q=80'
+    image: 'https://images.unsplash.com/photo-1521540216272-a50305cd4421?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5433224431f2cb232741669ea1a89dca&auto=format&fit=crop&w=927&q=80'
   },
   {
     title: 'Fori-YelpCamp',
     url: 'https://safe-island-56168.herokuapp.com/',
     description: ' Create an account, share campsites you\'ve visited or check out and comment on other\'s campsites.',
-    image:"https://images.unsplash.com/photo-1518062304627-5532ae8c3ff2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a3acc6e76323327d75c0eb9d3d623d1d&auto=format&fit=crop&w=1936&q=80"
+    image:"https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=d9df10d159cc11074d9a7996e8aca442&auto=format&fit=crop&w=1950&q=80"
   },
   {
     title: 'Fori-Indecision',
@@ -23,12 +23,12 @@ export const store = [
     title: 'Fori-Weather',
     url: 'https://fori-weather.herokuapp.com/',
     description: "Find out the weather conditions all around the world (not optimizes for mobile yet...)",
-    image:"https://images.unsplash.com/uploads/1412455906842d646f1ce/7bf17d33?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=211a80c5e97e8292b43a36d76ccfd0ec&auto=format&fit=crop&w=1955&q=80"
+    image:"https://images.unsplash.com/photo-1516912481808-3406841bd33c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=859ed08b994af2b44509aeb00f56d7f9&auto=format&fit=crop&w=683&q=80"
   },
   {
     title: 'Fori-RPC',
     url: 'https://forigame.stackblitz.io/',
-    description: 'Simple Rock-Paper-Scissors game, created in about 2-3 hours online to battle boredome.',
-    image: "https://www.walldevil.com/wallpapers/a38/wallpaper-easiest-piece-gaming-7kocz.jpg"
+    description: 'Simple game, created in about 2-3 hours online to battle boredome.',
+    image: "https://images.unsplash.com/photo-1466115593837-8141bdee03d8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af7129530ff94099ab840322eca7fb99&auto=format&fit=crop&w=1950&q=80"
   },
 ];
