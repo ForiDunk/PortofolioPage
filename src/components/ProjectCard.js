@@ -9,7 +9,7 @@ import {
   withStyles
 } from "@material-ui/core";
 import PropTypes from "prop-types";
-import Fade  from 'react-reveal/Fade';
+import Roll  from 'react-reveal/Roll';
 
 const styles = {
   card: {
@@ -25,7 +25,7 @@ const styles = {
 const ProjectCard = ({ project, ...props }) => {
   
   return (
-    <Fade left>
+    <Roll left duration={2000}>
       <Card raised className={props.classes.card}>
         <CardMedia className={props.classes.media} image={project.image} />
         <CardContent>
@@ -52,7 +52,7 @@ const ProjectCard = ({ project, ...props }) => {
           </Button>
         </CardActions>
       </Card>
-    </Fade>
+    </Roll>
   );
 }
 
