@@ -26,12 +26,12 @@ const styles = {
   button: {
     width: 100,
     height: 60,
-    fontSize: "2rem",
     fontWeight: "bold",
+    fontSize: "1.4em",
     textShadow: "1px 1px 1px #4DD0E1, 2px 2px 2px #00838F",
     "&:hover": {
       transition: "1.5s",
-      fontSize: "4rem",
+      fontSize: "2.8em",
       width: 200,
       height: 120
     }

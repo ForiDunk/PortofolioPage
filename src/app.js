@@ -7,6 +7,9 @@ const theme = createMuiTheme({
   typography: {
     fontSize: 16
   },
+  button: {
+    fontSize: 30
+  },
   palette: {
     type: "dark",
     primary: {
