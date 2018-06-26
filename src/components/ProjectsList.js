@@ -3,6 +3,7 @@ import { store } from "./store";
 import ProjectCard from "./ProjectCard";
 import { withStyles, Typography } from "@material-ui/core";
 import PropTypes from "prop-types";
+import Zoom from "react-reveal/Zoom";
 
 const styles = {
   div: {
@@ -30,7 +31,23 @@ const ProjectsList = props => (
       Below you can find some of my projects:
     </Typography>
     <div className={props.classes.div}>
-      {store.map((project, i) => <ProjectCard key={i} project={project} />)}
+      {store.map((project, i) => {
+        if(i % 2 === 0) {
+          return (
+            <Zoom left duration={2000}>
+              <ProjectCard key={i} project={project} />
+            </Zoom>
+          );
+        } else {
+          return (
+            <Zoom right duration={2000}>
+              <ProjectCard key={i} project={project} />
+            </Zoom>
+          );
+        }
+      }
+        
+      )}
     </div>
   </Fragment>
 );
