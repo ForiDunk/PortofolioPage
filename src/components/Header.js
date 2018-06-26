@@ -2,47 +2,29 @@ import React from "react";
 import {
   AppBar,
   Toolbar,
-  Typography,
-  Button,
+  IconButton,
   withStyles
 } from "@material-ui/core";
 import PropTypes from "prop-types";
+import { FaFacebook, FaGithub, FaLinkedin} from 'react-icons/lib/fa';
 
 const styles = {
   toolBar: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    alignItems: "center",
-    background: "linear-gradient(45deg, #006064 20%, #4DD0E1 80%, #E0F7FA 95%)"
+    background: "linear-gradient(45deg, #006064 10%, #4DD0E1 60%, #E0F7FA 90%)"
   },
   appBar: {
     opacity: 0.9
   },
-  button: {
-    fontWeight: 700
+  buttons: {
   }
 };
 
 const Header = props => (
   <AppBar className={props.classes.appBar} position="sticky" color="primary">
     <Toolbar className={props.classes.toolBar}>
-      <div>
-        <Typography variant="display1" color="inherit">
-          Welcome to my site
-        </Typography>
-        <Typography variant="caption" color="inherit">
-          Feel free to check out my projects and please give me a feedback.
-        </Typography>
-      </div>
-      <Button
-        size="small"
-        color="primary"
-        className={props.classes.button}
-        onClick={props.onClick}
-      >
-        Contact
-      </Button>
+      <IconButton className={props.classes.buttons} href="https://www.facebook.com/forreiter.szabolcs" target="_blank" variant="fab"><FaFacebook /></IconButton>
+      <IconButton className={props.classes.buttons} href="https://github.com/ForiDunk" target="_blank" variant="fab"><FaGithub /></IconButton>
+      <IconButton className={props.classes.buttons} href="https://www.linkedin.com/in/szabolcs-forreiter/" target="_blank" variant="fab"><FaLinkedin /></IconButton>
     </Toolbar>
   </AppBar>
 );

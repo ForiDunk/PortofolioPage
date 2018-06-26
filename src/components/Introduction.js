@@ -1,8 +1,6 @@
 import React from "react";
 import { Avatar, Typography, withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
-import { pictures } from "./store";
-import Roll from "react-reveal/Roll";
 
 const styles = {
   div: {
@@ -13,11 +11,6 @@ const styles = {
     margin: 30
   },
   avatar: {
-    width: 120,
-    height: 120,
-    margin: 5
-  },
-  mainAvatar: {
     width: 200,
     height: 200,
     marginBottom: 20
@@ -38,6 +31,11 @@ const styles = {
 
 const Introduction = props => (
   <div className={props.classes.div}>
+    <Avatar
+        className={props.classes.avatar}
+        alt="Szabolcs Forreiter"
+        src="https://image.ibb.co/iLgtx8/2015_05_25_14_29_09_512.jpg"
+      />
     <Typography
       className={props.classes.mainText}
       color="secondary"
@@ -53,7 +51,6 @@ const Introduction = props => (
     >
       My name is Szabolcs Forreiter and I LOVE coding!
     </Typography>
-    <Avatar className={props.classes.mainAvatar} src={pictures[0]} />
     <Typography
       className={props.classes.text}
       color="secondary"
@@ -62,7 +59,6 @@ const Introduction = props => (
       I am a former professional basketball player and I've played around 16
       years (I feel old...).
     </Typography>
-    <Avatar className={props.classes.avatar} src={pictures[1]} />
     <Typography
       className={props.classes.text}
       color="secondary"
@@ -71,7 +67,6 @@ const Introduction = props => (
       Nowadays I spend less time on the court and more time in front of a PC or
       a laptop.
     </Typography>
-    <Avatar className={props.classes.avatar} src={pictures[2]} />
     <Typography
       className={props.classes.mainText}
       color="secondary"
@@ -95,7 +90,6 @@ const Introduction = props => (
       My competitiveness was raised to an other level when I started to play
       basketball at a young age.
     </Typography>
-    <Avatar className={props.classes.avatar} src={pictures[3]} />
     <Typography
       className={props.classes.text}
       color="secondary"
@@ -104,20 +98,6 @@ const Introduction = props => (
       I feel lucky that on my journey I've met a LOT of interesting people and
       all of them had a huge impanct on becoming who I am.
     </Typography>
-    <div className={props.classes.friends}>
-      {pictures.map((picture, i) => {
-        if (i > 3 && i < 14) {
-          return (
-            <Avatar
-              className={props.classes.avatar}
-              key={i}
-              src={pictures[i]}
-            />
-          );
-        }
-      })}
-    </div>
-
     <Typography
       className={props.classes.text}
       color="secondary"
@@ -125,19 +105,6 @@ const Introduction = props => (
     >
       We only live once, so why not go after the things you want in life.
     </Typography>
-    <div className={props.classes.friends}>
-      {pictures.map((picture, i) => {
-        if (i > 13 && i < 20) {
-          return (
-            <Avatar
-              className={props.classes.avatar}
-              key={i}
-              src={pictures[i]}
-            />
-          );
-        }
-      })}
-    </div>
   </div>
 );
 
