@@ -24,10 +24,7 @@ const styles = {
 };
 
 const Contact = props => (
-  <Drawer
-    open={props.open}
-    onClose={props.close}
-  >
+  <Drawer open={props.open} onClose={props.close}>
     <Avatar
       className={props.classes.avatar}
       alt="Szabolcs Forreiter"
@@ -40,17 +37,11 @@ const Contact = props => (
     >
       Szabolcs Forreiter
     </Typography>
-    <Button
-      href="https://github.com/ForiDunk"
-      target="_blank"
-    >
+    <Button href="https://github.com/ForiDunk" target="_blank">
       GitHub
     </Button>
     <Divider />
-    <Button
-      href="https://www.facebook.com/forreiter.szabolcs"
-      target="_blank"
-    >
+    <Button href="https://www.facebook.com/forreiter.szabolcs" target="_blank">
       Facebook
     </Button>
     <Divider />

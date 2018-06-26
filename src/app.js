@@ -4,6 +4,9 @@ import AppRouter from './routers/AppRouter';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
 const theme = createMuiTheme({
+  typography: {
+    fontSize: 16
+  },
   palette: {
     type: "dark",
     primary: {

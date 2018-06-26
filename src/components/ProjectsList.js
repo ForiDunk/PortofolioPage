@@ -14,22 +14,23 @@ const styles = {
     marginBottom: 20
   },
   title: {
-    marginTop: 50,
+    marginTop: 70,
     marginBottom: 10,
-    textAlign: 'center'
+    textAlign: "center"
   }
 };
 
-const ProjectsList = (props) => (
+const ProjectsList = props => (
   <Fragment>
-      <Typography className={props.classes.title} variant="display2" color="secondary">Below you can find some of my projects:</Typography>
+    <Typography
+      className={props.classes.title}
+      variant="display1"
+      color="secondary"
+    >
+      Below you can find some of my projects:
+    </Typography>
     <div className={props.classes.div}>
-      {store.map((project, i) => (
-        <ProjectCard
-          key={i}
-          project={project}
-        />
-      ))}
+      {store.map((project, i) => <ProjectCard key={i} project={project} />)}
     </div>
   </Fragment>
 );
