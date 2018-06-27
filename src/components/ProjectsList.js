@@ -12,42 +12,29 @@ const styles = {
     flexWrap: "wrap",
     maxWidth: 600,
     marginTop: 10,
-    marginBottom: 20
-  },
-  title: {
-    marginTop: 70,
-    marginBottom: 10,
-    textAlign: "center"
+    marginBottom: 20,
+    paddingTop: 70
   }
 };
 
 const ProjectsList = props => (
   <Fragment>
-    <Typography
-      className={props.classes.title}
-      variant="display1"
-      color="secondary"
-    >
-      Below you can find some of my projects:
-    </Typography>
-    <div className={props.classes.div}>
+    <div id="projects" className={props.classes.div}>
       {store.map((project, i) => {
-        if(i % 2 === 0) {
+        if (i % 2 === 0) {
           return (
-            <Zoom left duration={2000}>
-              <ProjectCard key={i} project={project} />
+            <Zoom key={i.toString()} left duration={2000}>
+              <ProjectCard key={i.toString()} project={project} />
             </Zoom>
           );
         } else {
           return (
-            <Zoom right duration={2000}>
-              <ProjectCard key={i} project={project} />
+            <Zoom key={i.toString()} right duration={2000}>
+              <ProjectCard key={i.toString()} project={project} />
             </Zoom>
           );
         }
-      }
-        
-      )}
+      })}
     </div>
   </Fragment>
 );

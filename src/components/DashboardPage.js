@@ -4,27 +4,35 @@ import Header from "./Header";
 import ProjectsList from "./ProjectsList";
 import Introduction from "./Introduction";
 import LandingPage from "./LandingPage";
-import { withStyles } from "@material-ui/core";
+import { withStyles, Button } from "@material-ui/core";
 import PropTypes from "prop-types";
 
 const styles = {
   div: {
-    width: '100%',
-    display: 'flex',
-    flexWrap: 'wrap',
-    alignItems: 'center',
-    flexDirection: 'column',
-    justifyContent: 'center'
+    width: "100%",
+    display: "flex",
+    flexWrap: "wrap",
+    alignItems: "center",
+    flexDirection: "column",
+    justifyContent: "center"
   }
 };
 
 class DashboardPage extends React.Component {
   constructor(props) {
     super(props);
-  };
+  }
 
   state = {
     landing: true
+  };
+
+  handleButtonClick = () => {
+    document.getElementById("projects").scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    });
   };
 
   handleLanding = () => {
@@ -32,19 +40,17 @@ class DashboardPage extends React.Component {
   };
 
   render() {
-    {
-      if (this.state.landing) {
-        return <LandingPage onClick={this.handleLanding} />;
-      } else {
-        return (
-          <div className={this.props.classes.div}>
-            <CssBaseline />
-            <Header />
-            <Introduction />
-            <ProjectsList />
-          </div>
-        );
-      }
+    if (this.state.landing) {
+      return <LandingPage onClick={this.handleLanding} />;
+    } else {
+      return (
+        <div className={this.props.classes.div}>
+          <CssBaseline />
+          <Header />
+          <Introduction onClick={this.handleButtonClick} />
+          <ProjectsList />
+        </div>
+      );
     }
   }
 }
@@ -54,4 +60,3 @@ DashboardPage.propTypes = {
   classes: PropTypes.object.isRequired
 };
 export default withStyles(styles)(DashboardPage);
-

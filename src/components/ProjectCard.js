@@ -10,7 +10,6 @@ import {
 } from "@material-ui/core";
 import PropTypes from "prop-types";
 
-
 const styles = {
   card: {
     maxWidth: 250,

@@ -1,12 +1,7 @@
 import React from "react";
-import {
-  AppBar,
-  Toolbar,
-  IconButton,
-  withStyles
-} from "@material-ui/core";
+import { AppBar, Toolbar, IconButton, withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
-import { FaFacebook, FaGithub, FaLinkedin} from 'react-icons/lib/fa';
+import { FaFacebook, FaGithub, FaLinkedin } from "react-icons/lib/fa";
 
 const styles = {
   toolBar: {
@@ -16,15 +11,37 @@ const styles = {
     opacity: 0.9
   },
   buttons: {
+    margin: 0
   }
 };
 
 const Header = props => (
   <AppBar className={props.classes.appBar} position="sticky" color="primary">
     <Toolbar className={props.classes.toolBar}>
-      <IconButton className={props.classes.buttons} href="https://www.facebook.com/forreiter.szabolcs" target="_blank" variant="fab"><FaFacebook /></IconButton>
-      <IconButton className={props.classes.buttons} href="https://github.com/ForiDunk" target="_blank" variant="fab"><FaGithub /></IconButton>
-      <IconButton className={props.classes.buttons} href="https://www.linkedin.com/in/szabolcs-forreiter/" target="_blank" variant="fab"><FaLinkedin /></IconButton>
+      <IconButton
+        className={props.classes.buttons}
+        href="https://www.facebook.com/forreiter.szabolcs"
+        target="_blank"
+        variant="fab"
+      >
+        <FaFacebook />
+      </IconButton>
+      <IconButton
+        className={props.classes.buttons}
+        href="https://github.com/ForiDunk"
+        target="_blank"
+        variant="fab"
+      >
+        <FaGithub />
+      </IconButton>
+      <IconButton
+        className={props.classes.buttons}
+        href="https://www.linkedin.com/in/szabolcs-forreiter/"
+        target="_blank"
+        variant="fab"
+      >
+        <FaLinkedin />
+      </IconButton>
     </Toolbar>
   </AppBar>
 );
