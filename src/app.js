@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import AppRouter from './routers/AppRouter';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import 'App.css';
+import './App.css';
 
 const theme = createMuiTheme({
   typography: {
