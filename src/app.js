@@ -27,6 +27,8 @@ const theme = createMuiTheme({
   }
 });
 
+document.body.style.margin = 0;
+
 const DarkTheme = () => {
   return (
     <MuiThemeProvider theme={theme}>
