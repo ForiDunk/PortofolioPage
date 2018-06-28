@@ -93,7 +93,7 @@ const Introduction = props => (
       after they retire from their sports activity.
       <br />
       Coding for me is the same as basketball. It is someting I find myself
-      often doing it for fun, in my spare time.
+      often reading an article online about the newest thing in programming or trinking about improvements on my projects.
       <br />
       Doing something that you love as a profession is something everyone wants
       to accomplish.

@@ -38,7 +38,7 @@ const Footer = props => (
     >
       <Toolbar className={props.classes.toolBar1}>
         <Typography variant="caption">
-          &copy; {new Date().getFullYear()} Copyright:
+          &copy; {new Date().getFullYear()} Copyright: 
           <a
             className={props.classes.name}
             target="_blank"
