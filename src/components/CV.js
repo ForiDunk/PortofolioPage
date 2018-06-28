@@ -8,8 +8,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    margin: 20,
-    paddingBottom: 20
+    margin: 10
   },
   button: {
     background: "radial-gradient(#26C6DA 10%, #006064 90%)",

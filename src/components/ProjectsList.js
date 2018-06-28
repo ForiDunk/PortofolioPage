@@ -23,13 +23,13 @@ const ProjectsList = props => (
       {store.map((project, i) => {
         if (i % 2 === 0) {
           return (
-            <Zoom key={i.toString()} left duration={2000}>
+            <Zoom left key={i.toString()} duration={2000}>
               <ProjectCard key={i.toString()} project={project} />
             </Zoom>
           );
         } else {
           return (
-            <Zoom key={i.toString()} right duration={2000}>
+            <Zoom right key={i.toString()} duration={2000}>
               <ProjectCard key={i.toString()} project={project} />
             </Zoom>
           );

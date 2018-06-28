@@ -1,12 +1,10 @@
 import React from "react";
-import { Avatar, Typography, withStyles, IconButton } from "@material-ui/core";
+import { Avatar, Typography, withStyles, Button } from "@material-ui/core";
 import PropTypes from "prop-types";
 import { FaChevronDown } from "react-icons/lib/fa";
 
 const styles = {
   div: {
-    height: '100%',
-    width: '100%',
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
@@ -16,10 +14,14 @@ const styles = {
     maxWidth: 500
   },
   avatar: {
-    width: 240,
-    height: 240,
+    width: 200,
+    height: 200,
     marginBottom: 50,
-    marginTop: 10
+    "&:hover": {
+      width: 250,
+      height: 250,
+      transition: "1s"
+    }
   },
   text: {
     margin: 10
@@ -53,14 +55,19 @@ const Introduction = props => (
     >
       Hello, let me introduce myself:
     </Typography>
-
+    <br />
+    <Typography
+      className={props.classes.text}
+      color="secondary"
+      variant="subheading"
+    >
+      My name is Szabolcs Forreiter and I LOVE coding!
+    </Typography>
     <Typography
       className={props.classes.text}
       color="secondary"
       variant="body1"
     >
-      My name is Szabolcs Forreiter and I LOVE coding!
-      <br />
       <br />
       I am a former professional basketball player and I've played around 16
       years (I feel old...). Nowadays I spend less time on the court and more
@@ -72,14 +79,33 @@ const Introduction = props => (
       youngest child. My competitiveness was raised to an other level when I
       started to play basketball at a young age.
       <br />
+      During my career as an athlete I managed to master the ability to work in
+      a team, in a multi cultural enviroment. With some of my former teammates I
+      keep in touch up to this day and I consider them my friends.
+      <br />
+      Basketball was more than just a job for me. I played basketball all day
+      long. It didn't matter where, when or with whom.
+      <br />
+      I got lucky not once, but twice. I found an other passion at the start of
+      2017, that is coding.
+      <br />
+      Usually athletes have a hard time finding something that they truly like
+      after they retire from their sports activity.
+      <br />
+      Coding for me is the same as basketball. It is someting I find myself
+      often doing it for fun, in my spare time.
+      <br />
+      Doing something that you love as a profession is something everyone wants
+      to accomplish.
+      <br />
       We only live once, so why not go after the things you want in life.
     </Typography>
     <Typography className={props.classes.toProjectsText} variant="subheading">
       Below you can find some of my projects
     </Typography>
-    <IconButton size="large" onClick={props.onClick}>
+    <Button size="large" variant="outlined" onClick={props.onClick}>
       <FaChevronDown />
-    </IconButton>
+    </Button>
   </div>
 );
 

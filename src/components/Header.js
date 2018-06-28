@@ -8,10 +8,7 @@ const styles = {
     background: "linear-gradient(45deg, #006064 10%, #4DD0E1 60%, #E0F7FA 90%)"
   },
   appBar: {
-    opacity: 0.9
-  },
-  buttons: {
-    margin: 0
+    opacity: 0.7
   }
 };
 
@@ -35,7 +32,6 @@ const Header = props => (
         <FaGithub />
       </IconButton>
       <IconButton
-        className={props.classes.buttons}
         href="https://www.linkedin.com/in/szabolcs-forreiter/"
         target="_blank"
         variant="fab"

@@ -1,6 +1,7 @@
 import React from "react";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Header from "./Header";
+import Footer from "./Footer";
 import ProjectsList from "./ProjectsList";
 import Introduction from "./Introduction";
 import LandingPage from "./LandingPage";
@@ -19,10 +20,6 @@ const styles = {
 };
 
 class DashboardPage extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   state = {
     landing: true
   };
@@ -49,6 +46,7 @@ class DashboardPage extends React.Component {
           <Header />
           <Introduction onClick={this.handleButtonClick} />
           <ProjectsList />
+          <Footer />
         </div>
       );
     }
