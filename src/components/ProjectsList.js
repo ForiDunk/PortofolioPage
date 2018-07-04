@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
 import { store } from "./store";
 import ProjectCard from "./ProjectCard";
-import { withStyles, Typography } from "@material-ui/core";
+import { withStyles } from "@material-ui/core";
 import PropTypes from "prop-types";
 import Zoom from "react-reveal/Zoom";
 
 const styles = {
-  div: {
+  section: {
     display: "flex",
     justifyContent: "center",
     flexWrap: "wrap",
@@ -19,7 +19,7 @@ const styles = {
 
 const ProjectsList = props => (
   <Fragment>
-    <div id="projects" className={props.classes.div}>
+    <section id="projects" className={props.classes.section}>
       {store.map((project, i) => {
         if (i % 2 === 0) {
           return (
@@ -35,7 +35,7 @@ const ProjectsList = props => (
           );
         }
       })}
-    </div>
+    </section>
   </Fragment>
 );
 

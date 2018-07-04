@@ -1,10 +1,10 @@
 import React from "react";
-import { Avatar, Typography, withStyles, Button } from "@material-ui/core";
+import { Avatar, Typography, withStyles, IconButton } from "@material-ui/core";
 import PropTypes from "prop-types";
 import { FaChevronDown } from "react-icons/lib/fa";
 
 const styles = {
-  div: {
+  main: {
     display: "flex",
     alignItems: "center",
     flexDirection: "column",
@@ -42,12 +42,18 @@ const styles = {
 };
 
 const Introduction = props => (
-  <div className={props.classes.div}>
+  <main className={props.classes.main}>
     <Avatar
       className={props.classes.avatar}
       alt="Szabolcs Forreiter"
       src="https://image.ibb.co/iLgtx8/2015_05_25_14_29_09_512.jpg"
     />
+    <Typography className={props.classes.toProjectsText} variant="subheading">
+      Jump to my projects:
+    </Typography>
+    <IconButton size="large" onClick={props.onClick}>
+      <FaChevronDown />
+    </IconButton>
     <Typography
       className={props.classes.mainText}
       color="secondary"
@@ -100,13 +106,7 @@ const Introduction = props => (
       <br />
       We only live once, so why not go after the things you want in life.
     </Typography>
-    <Typography className={props.classes.toProjectsText} variant="subheading">
-      Below you can find some of my projects
-    </Typography>
-    <Button size="large" variant="outlined" onClick={props.onClick}>
-      <FaChevronDown />
-    </Button>
-  </div>
+  </main>
 );
 
 Introduction.propTypes = {
