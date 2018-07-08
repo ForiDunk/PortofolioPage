@@ -29,7 +29,7 @@ export const store = [
     title: "Fori-Weather",
     url: "https://fori-weather.herokuapp.com/",
     description:
-      "Find out the weather conditions all around the world (not optimizes for mobile yet...)",
+      "Find out the weather conditions all around the world.",
     image:
       "https://images.unsplash.com/photo-1516912481808-3406841bd33c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=859ed08b994af2b44509aeb00f56d7f9&auto=format&fit=crop&w=683&q=80"
   },
@@ -40,5 +40,13 @@ export const store = [
       "Simple game, created in about 2-3 hours online to battle boredome.",
     image:
       "https://images.unsplash.com/photo-1466115593837-8141bdee03d8?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=af7129530ff94099ab840322eca7fb99&auto=format&fit=crop&w=1950&q=80"
+  },
+  {
+    title: "Fori-Cube",
+    url: "https://fori-cube.firebaseapp.com/#/",
+    description:
+      "A phonebook in the form of a 3D cube.",
+    image:
+      "https://images.unsplash.com/photo-1495615080073-6b89c9839ce0?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=2bfb07a6ffd097d8293476d7af38a109&auto=format&fit=crop&w=2022&q=80"
   }
 ];
