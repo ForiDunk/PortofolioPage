@@ -23,7 +23,7 @@ const CV = props => (
     <Typography variant="caption">You can download my CV here:</Typography>
     <Tooltip title="Download CV">
       <Button
-        href="https://drive.google.com/open?id=1tj2qZKHA42bMA0f9Z_WSpL6gzfQ6g9_O"
+        href="https://drive.google.com/file/d/1IrPZg5aIcyGSnU0LhvVQG30zHH5b69Bn/view?usp=sharing"
         target="_blank"
         variant="fab"
         className={props.classes.button}
